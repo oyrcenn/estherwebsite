@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="estherwebsite.css">
+  <style>
+  </style>
+</head>
+<body>
+  <!-- Mailbox GIF -->
+  <div class="container">
+    <img src="mailbox1.gif" class = "mailBox1" id="mailBox1">
+    <img src="mailbox2.gif" class = "mailBox2" id="mailBox2">
+    <button class="showBtn" id="showBtn">Show Mails!</button>
+  </div>
+  <div class="container2">
+    <img src="mailletter1.png" class = "mailLetter1" id="mailLetter1" style="opacity: 0; cursor:pointer;">
+    <img src="mailletter2.png" class = "mailLetter2" id="mailLetter2" style="opacity: 0; cursor:pointer;">
+    <img src="mailletter3.png" class = "mailLetter3" id="mailLetter3" style="opacity: 0; cursor:pointer;">
+  </div>
+  <div class="container1">
+    <img src="paper1.png" class = "paper" id="paper1" style="opacity: 0; visibility: hidden;">
+    <img src="paper2.png" class = "paper" id="paper2" style="opacity: 0; visibility: hidden;">
+    <img src="paper3.png" class = "paper" id="paper3" style="opacity: 0; visibility: hidden;">
+  </div>
+  <script>
+const button = document.querySelector('.showBtn');
+
+const papers = [
+  document.getElementById('paper1'),
+  document.getElementById('paper2'),
+  document.getElementById('paper3')
+];
+
+const letters = [
+  document.getElementById('mailLetter1'),
+  document.getElementById('mailLetter2'),
+  document.getElementById('mailLetter3')
+];
+
+mailLetter1.addEventListener('click', () => {
+  const currentVisibility = window.getComputedStyle(paper1).visibility;
+
+  if (currentVisibility === 'hidden') {
+    paper1.style.visibility = 'visible';
+    paper1.style.opacity = '1';
+  } else {
+    paper1.style.visibility = 'hidden';
+    paper1.style.opacity = '0';
+  }
+});
+
+mailLetter2.addEventListener('click', () => {
+  const currentVisibility = window.getComputedStyle(paper2).visibility;
+
+  if (currentVisibility === 'hidden') {
+    paper2.style.visibility = 'visible';
+    paper2.style.opacity = '1';
+  } else {
+    paper2.style.visibility = 'hidden';
+    paper2.style.opacity = '0';
+  }
+});
+
+mailLetter3.addEventListener('click', () => {
+  const currentVisibility = window.getComputedStyle(paper3).visibility;
+
+  if (currentVisibility === 'hidden') {
+    paper3.style.visibility = 'visible';
+    paper3.style.opacity = '1';
+  } else {
+    paper3.style.visibility = 'hidden';
+    paper3.style.opacity = '0';
+  }
+});
+
+
+
+
+button.addEventListener('click', () => {
+  letters.forEach(img => {
+    const current = window.getComputedStyle(img).opacity;
+    img.style.opacity = (current === '0') ? '1' : '0';
+  });
+});
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+ body {
+      background-image: url("background.gif"); /* your image file */
+      image-rendering: pixelated;
+      background-size: cover;   /* makes it fill the screen */
+      background-position: center; /* keeps it centered */
+      background-repeat: no-repeat; /* prevents tiling */
+
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @font-face {
+    font-family: "Silkscreen";
+    src: url("font/Silkscreen.woff") format("woff"),
+    }
+
+    body {
+    font-family: "Silkscreen", sans-serif;
+    }
+
+      .mailBox1, .mailBox2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* shift back half its size */
+    }
+
+    .mailBox1 {
+        opacity: 1;
+    }
+
+    .mailBox2 {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .showBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-18%, -70%);
+        padding: 5px 0px;
+        background: #ffd1ec;
+        color: rgb(0, 163, 144);
+        border: 5px solid rgb(97, 65, 41);
+        cursor: pointer;
+        font-family: "Silkscreen", sans-serif;
+        font-size: 20px;
+        transition: opacity 1s ease, visibility 0.5s ease;
+        opacity: 0;
+        visibility: hidden; 
+    }
+
+    .container:hover .mailBox1 {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+    }
+
+    .container:hover .mailBox2 {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+    }
+
+    .container:hover .showBtn {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+
+    .mailLetter1 {
+        width: 400px;
+        height: 400px;
+        z-index: 2;
+        transition: opacity 1s ease;
+        
+    }
+
+    .mailLetter2 {
+        width: 400px;
+        height: 400px;
+        z-index: 2;
+        transition: opacity 1s ease;
+    }
+
+    .mailLetter3 {
+        width: 400px;
+        height: 400px;
+        z-index: 2;
+        transition: opacity 1s ease;
+    }
+
+    .container2 {
+        position: absolute;
+        display: flex;              /* puts them in a row */
+        justify-content: center;    /* centers them horizontally */
+        gap: 20px;                  /* space between images */
+        width: 95px;
+        height: 120%;
+    }
+
+    .paper {
+        position: absolute;   /* take it out of normal flow */
+        justify-self: center;
+        top: 50%;             /* push halfway down */
+        left: 50%;            /* push halfway across */
+        transform: translate(-50%, -50%); /* pull back by half its own size */
+    }
+
+
+
+
+    
