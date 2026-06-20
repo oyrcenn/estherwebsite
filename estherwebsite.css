@@ -99,7 +99,7 @@
         display: flex;              /* puts them in a row */
         justify-content: center;    /* centers them horizontally */
         gap: 20px;                  /* space between images */
-        width: 95px;
+        width: 85px;
         height: 140%;
     }
 
