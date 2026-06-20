@@ -99,8 +99,8 @@
         display: flex;              /* puts them in a row */
         justify-content: center;    /* centers them horizontally */
         gap: 20px;                  /* space between images */
-        width: 50px;
-        height: 160%;
+        width: 95px;
+        height: 125%;
     }
 
     .paper {
