@@ -100,7 +100,7 @@
         justify-content: center;    /* centers them horizontally */
         gap: 20px;                  /* space between images */
         width: 95px;
-        height: 120%;
+        height: 125%;
     }
 
     .paper {
